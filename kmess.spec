@@ -1,13 +1,13 @@
 %define name	 kmess
 %define version	 1.5
-%define release	 %mkrel 0.pre1.1
+%define release	 %mkrel 0.pre2.1
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Group:		Graphical desktop/KDE
 License:	GPL
-Source0:        http://ovh.dl.sourceforge.net/sourceforge/kmess/%{name}-%{version}pre1.tar.bz2
+Source0:        http://ovh.dl.sourceforge.net/sourceforge/kmess/%{name}-%{version}pre2.tar.gz
 
 URL:		http://kmess.sourceforge.net
 BuildRequires:  kdebase-devel
@@ -22,7 +22,7 @@ KMess is an easy-to-use MSN Messenger client for KDE. Install it
 if you want an MSN Messenger client.
 
 %prep
-%setup -q -n %{name}-%{version}pre1
+%setup -q -n %{name}-%{version}pre2
 
 
 %build
@@ -50,9 +50,6 @@ CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" \
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
-
-install -d $RPM_BUILD_ROOT/%{_menudir}
-kdedesktop2mdkmenu.pl %{name} "Networking/Instant messaging" $RPM_BUILD_ROOT%{_datadir}/applications/kde/kmess.desktop $RPM_BUILD_ROOT%{_menudir}/%{name} kde
 install -m644 $RPM_BUILD_ROOT%{_iconsdir}/hicolor/16x16/apps/%{name}.png -D $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
 install -m644 $RPM_BUILD_ROOT%{_iconsdir}/hicolor/32x32/apps/%{name}.png -D $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
 install -m644 $RPM_BUILD_ROOT%{_iconsdir}/hicolor/48x48/apps/%{name}.png -D $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
@@ -95,7 +92,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
-%{_menudir}/%{name}
 
 
 
