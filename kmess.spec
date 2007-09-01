@@ -1,6 +1,6 @@
 %define name	 kmess
 %define version	 1.5
-%define release	 %mkrel 0.pre2.1
+%define release	 %mkrel 0.pre2.2
 
 Name:		%{name}
 Version:	%{version}
@@ -8,7 +8,7 @@ Release:	%{release}
 Group:		Graphical desktop/KDE
 License:	GPL
 Source0:        http://ovh.dl.sourceforge.net/sourceforge/kmess/%{name}-%{version}pre2.tar.gz
-
+Patch0:		kmess-1.5pre2-remove-de-comment.patch
 URL:		http://kmess.sourceforge.net
 BuildRequires:  kdebase-devel
 BuildRequires:	kdenetwork-devel
@@ -23,6 +23,7 @@ if you want an MSN Messenger client.
 
 %prep
 %setup -q -n %{name}-%{version}pre2
+%patch0 -p0
 
 
 %build
@@ -92,6 +93,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
-
-
-
