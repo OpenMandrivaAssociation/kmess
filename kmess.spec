@@ -13,7 +13,6 @@ URL:		http://kmess.sourceforge.net
 BuildRequires:  kdebase-devel
 BuildRequires:	kdenetwork-devel
 BuildRequires:  libxslt-devel
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 Summary:	Yet another MSN messenger for KDE
 
 
