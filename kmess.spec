@@ -1,13 +1,13 @@
 %define name	 kmess
 %define version	 1.5
-%define release	 %mkrel 0.pre2.2
+%define release	 %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Group:		Graphical desktop/KDE
-License:	GPL
-Source0:        http://ovh.dl.sourceforge.net/sourceforge/kmess/%{name}-%{version}pre2.tar.gz
+License:	GPLv2+
+Source0:        http://ovh.dl.sourceforge.net/sourceforge/kmess/%{name}-%{version}.tar.gz
 Patch0:		kmess-1.5pre2-remove-de-comment.patch
 URL:		http://kmess.sourceforge.net
 BuildRequires:  kdebase-devel
@@ -22,15 +22,12 @@ KMess is an easy-to-use MSN Messenger client for KDE. Install it
 if you want an MSN Messenger client.
 
 %prep
-%setup -q -n %{name}-%{version}pre2
+%setup -q -n %{name}-%{version}
 %patch0 -p0
 
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" \
-./configure	--build=%{_target_platform} \
-		--prefix=%{_prefix} \
-		--libdir=%{_libdir} \
+%configure2_5x \
 		--disable-debug \
 		--enable-mt \
 		--enable-shared \
