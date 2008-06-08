@@ -11,6 +11,7 @@ License:	GPLv2+
 Source0:        http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.svn%{svn}.tar.bz2
 URL:		http://kmess.sourceforge.net
 BuildRequires:  kdelibs4-devel
+BuildRequires:	libxslt-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 Summary:	Yet another MSN messenger for KDE
 
