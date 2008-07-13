@@ -1,7 +1,7 @@
 %define name	 kmess
 %define version	 2.0.0
 %define release	 %mkrel 0.svn%{svn}.1
-%define svn      3247 
+%define svn      3479 
 
 Name:		%{name}
 Version:	%{version}
