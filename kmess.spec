@@ -1,7 +1,7 @@
 %define name	 kmess
 %define version	 2.0.0
 %define release	 %mkrel 0.svn%{svn}.1
-%define svn      3479 
+%define svn      4053 
 
 Name:		%{name}
 Version:	%{version}
@@ -12,6 +12,8 @@ Source0:        http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{vers
 URL:		http://kmess.sourceforge.net
 BuildRequires:  kdelibs4-devel
 BuildRequires:	libxslt-devel
+BuildRequires:	qca2 qca2-openssl qca2-devel
+Requires:	qca2-openssl
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 Summary:	Yet another MSN messenger for KDE
 
@@ -42,9 +44,7 @@ if you want an MSN Messenger client.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-cd build 
-%makeinstall_std
-cd -
+%makeinstall_std -C build
 
 %find_lang %name --with-html
 
