@@ -9,6 +9,7 @@ Release:	%{release}
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Source0:        http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.svn%{svn}.tar.bz2
+Patch0:		kmess-2.0.0-linkage.patch
 URL:		http://kmess.sourceforge.net
 BuildRequires:	kdelibs4-devel
 BuildRequires:  kdebase4-devel
@@ -28,6 +29,8 @@ if you want an MSN Messenger client.
 %defattr(-,root,root)
 %doc AUTHORS INSTALL TODO README ChangeLog
 %{_kde_bindir}/%{name}
+%{_kde_libdir}/kde4/*.so
+%{_kde_services}/*.desktop
 %{_kde_datadir}/apps/%{name}
 %{_kde_configdir}/*.knsrc
 %{_kde_datadir}/applications/kde4/kmess.desktop
@@ -41,6 +44,7 @@ if you want an MSN Messenger client.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p0
 
 %build
 %cmake_kde4
