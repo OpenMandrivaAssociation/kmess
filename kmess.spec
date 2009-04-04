@@ -1,7 +1,7 @@
 %define name	 kmess
 %define version	 2.0.0
 %define release	 %mkrel 0.svn%{svn}.1
-%define svn      4155
+%define svn      4516
 
 Name:		%{name}
 Version:	%{version}
@@ -10,9 +10,12 @@ Group:		Graphical desktop/KDE
 License:	GPLv2+
 Source0:        http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.svn%{svn}.tar.bz2
 URL:		http://kmess.sourceforge.net
-BuildRequires:  kdelibs4-devel
+BuildRequires:	kdelibs4-devel
+BuildRequires:  kdebase4-devel
+BuildRequires:	libxml2-devel
 BuildRequires:	libxslt-devel
 BuildRequires:	qca2 qca2-openssl qca2-devel
+BuildRequires:	libxscrnsaver-devel
 Requires:	qca2-openssl
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 Summary:	Yet another MSN messenger for KDE
@@ -26,6 +29,7 @@ if you want an MSN Messenger client.
 %doc AUTHORS INSTALL TODO README ChangeLog
 %{_kde_bindir}/%{name}
 %{_kde_datadir}/apps/%{name}
+%{_kde_configdir}/*.knsrc
 %{_kde_datadir}/applications/kde4/kmess.desktop
 %{_kde_iconsdir}/*/*/apps/%{name}.*
 %dir %{_kde_datadir}/emoticons/KMess-new
