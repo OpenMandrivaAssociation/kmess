@@ -1,6 +1,6 @@
 %define name	 kmess
 %define version	 2.0.0
-%define release	 %mkrel 0.svn%{svn}.1
+%define release	 %mkrel 1
 %define svn	 4770
 
 Name:		%{name}
@@ -8,7 +8,7 @@ Version:	%{version}
 Release:	%{release}
 Group:		Graphical desktop/KDE
 License:	GPLv2+
-Source0:	http://ufpr.dl.sourceforge.net/sourceforge/%{name}/%{name}-2.0beta2.tar.gz
+Source0:	http://ufpr.dl.sourceforge.net/sourceforge/%{name}/%{name}-2.0.tar.gz
 Patch0:		kmess-2.0.0-linkage.patch
 URL:		http://kmess.sourceforge.net
 BuildRequires:	kdelibs4-devel
@@ -43,7 +43,7 @@ if you want an MSN Messenger client.
 #--------------------------------------------------------------------
 
 %prep
-%setup -q -n %{name}-2.0beta2
+%setup -q -n %name-2.0
 %patch0 -p0
 
 %build
@@ -55,16 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 %makeinstall_std -C build
 
 %find_lang %name --with-html
-
-%if %mdkversion < 200900
-%post
-%update_menus
-%endif
-
-%if %mdkversion < 200900
-%postun
-%clean_menus
-%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
