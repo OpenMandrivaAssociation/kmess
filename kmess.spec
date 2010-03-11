@@ -1,5 +1,5 @@
 %define name	 kmess
-%define version	 2.0.2
+%define version	 2.0.3
 %define release	 %mkrel 1
 
 Name:		%{name}
@@ -14,9 +14,8 @@ BuildRequires:	kdelibs4-devel
 BuildRequires:  kdebase4-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	libxslt-devel
-BuildRequires:	qca2 qca2-openssl qca2-devel
+BuildRequires:	libgcrypt-devel
 BuildRequires:	libxscrnsaver-devel
-Requires:	qca2-openssl
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 Summary:	Yet another MSN messenger for KDE
 
