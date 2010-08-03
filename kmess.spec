@@ -1,5 +1,5 @@
 %define name	 kmess
-%define version	 2.0.3
+%define version	 2.0.4
 %define release	 %mkrel 1
 
 Name:		%{name}
@@ -7,7 +7,7 @@ Version:	%{version}
 Release:	%{release}
 Group:		Graphical desktop/KDE
 License:	GPLv2+
-Source0:	http://ufpr.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://ufpr.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		kmess-2.0.0-linkage.patch
 URL:		http://kmess.sourceforge.net
 BuildRequires:	kdelibs4-devel
