@@ -10,7 +10,6 @@ License:	GPLv2+
 Source0:	http://ufpr.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 Source1:	libisf-qt.tar.gz
 Patch0:		kmess-2.0.5-linkage.patch
-Patch1:		kmess-2.0.5-disableMailCheck.patch
 URL:		http://kmess.sourceforge.net
 BuildRequires:	kdelibs4-devel
 BuildRequires:  kdebase4-devel
@@ -45,7 +44,6 @@ if you want an MSN Messenger client.
 %prep
 %setup -q -n %name-%version
 %patch0 -p0
-%patch1 -p0
 pushd contrib
 tar xf %{SOURCE1}
 rm -fr isf-qt
