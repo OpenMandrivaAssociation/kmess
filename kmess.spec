@@ -1,6 +1,6 @@
 %define name	 kmess
 %define version	 2.0.6
-%define release	 %mkrel 2
+%define release	 %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
@@ -8,7 +8,6 @@ Release:	%{release}
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Source0:	http://ufpr.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
-Source1:	libisf-qt.tar.gz
 Patch0:		kmess-2.0.5-linkage.patch
 URL:		http://kmess.sourceforge.net
 BuildRequires:	kdelibs4-devel
@@ -44,11 +43,6 @@ if you want an MSN Messenger client.
 %prep
 %setup -q -n %name-%version
 %patch0 -p0
-pushd contrib
-tar xf %{SOURCE1}
-rm -fr isf-qt
-mv kmess-libisf-qt isf-qt
-popd
 
 %build
 %cmake_kde4
