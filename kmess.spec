@@ -1,6 +1,6 @@
 %define name	 kmess
-%define version	 2.0.6
-%define release	 %mkrel 3
+%define version	 2.0.6.1
+%define release	 %mkrel 0
 
 Name:		%{name}
 Version:	%{version}
