@@ -1,6 +1,6 @@
 %define name	 kmess
 %define version	 2.0.6.1
-%define release	 %mkrel 1
+%define release	 2
 
 Name:		%{name}
 Version:	%{version}
@@ -27,6 +27,8 @@ if you want an MSN Messenger client.
 %files -f %name.lang
 %defattr(-,root,root)
 %doc AUTHORS INSTALL TODO README ChangeLog
+%doc %_defaultdocdir/HTML/*/%name
+
 %{_kde_bindir}/%{name}
 %{_kde_libdir}/kde4/*.so
 %{_kde_services}/*.desktop
