@@ -1,6 +1,6 @@
 %define name	 kmess
 %define version	 2.0.6.1
-%define release	 %mkrel 0
+%define release	 %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -9,6 +9,7 @@ Group:		Graphical desktop/KDE
 License:	GPLv2+
 Source0:	http://ufpr.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		kmess-2.0.5-linkage.patch
+Patch1:		kmess-2.0.5-make_contacts_appear_again.patch
 URL:		http://kmess.sourceforge.net
 BuildRequires:	kdelibs4-devel
 BuildRequires:  kdebase4-devel
@@ -43,6 +44,7 @@ if you want an MSN Messenger client.
 %prep
 %setup -q -n %name-%version
 %patch0 -p0
+%patch1 -p0
 
 %build
 %cmake_kde4
