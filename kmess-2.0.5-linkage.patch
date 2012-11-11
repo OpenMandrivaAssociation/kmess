@@ -1,0 +1,11 @@
+--- src/utils/kmess-send/CMakeLists.txt.link	2010-11-18 02:11:52.000000000 +0000
++++ src/utils/kmess-send/CMakeLists.txt	2010-11-18 02:12:11.000000000 +0000
+@@ -7,7 +7,7 @@
+ 
+ ADD_DEFINITIONS(-fPIC)
+ 
+-ADD_LIBRARY( kmesssendpluginlib
++ADD_LIBRARY( kmesssendpluginlib STATIC
+    ../kmessdbusdatatypes.cpp
+    ../../contact/msnstatus.cpp
+    ../../kmessdebug.cpp
