@@ -1,7 +1,7 @@
 Summary:	Yet another MSN messenger for KDE
 Name:		kmess
 Version:	2.0.6.2
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://kmess.sourceforge.net
