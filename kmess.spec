@@ -4,7 +4,7 @@ Version:	2.0.6.2
 Release:	3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://kmess.sourceforge.net
+Url:		https://kmess.sourceforge.net
 Source0:	http://ufpr.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		kmess-2.0.5-linkage.patch
 Patch1:		kmess-2.0.6.2-fix-crash-in-contactlistmodel.patch
