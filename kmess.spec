@@ -9,6 +9,7 @@ Source0:	http://ufpr.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.t
 Patch0:		kmess-2.0.5-linkage.patch
 Patch1:		kmess-2.0.6.2-fix-crash-in-contactlistmodel.patch
 Patch2:		kmess-2.0.6.2-giflib51.patch
+BuildRequires:	make
 BuildRequires:	giflib-devel
 BuildRequires:	kdebase4-devel
 BuildRequires:	kdelibs4-devel
